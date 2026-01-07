@@ -64,7 +64,7 @@ return view.extend({
 			var status = this.rcStatusData && this.rcStatusData.qmodem_network ? this.rcStatusData.qmodem_network : null;
 			
 			if (!status) {
-				return E('div', { id: 'rc-status-container' }, [
+				return E('div', { id: 'rc-status-container' ,style: 'margin-top: 6px;'}, [
 					E('span', {}, _('Failed to load status'))
 				]);
 			}
@@ -72,7 +72,7 @@ return view.extend({
 			var enabled = status.enabled === true || status.enabled === 'true';
 			var running = status.running === true || status.running === 'true';
 			
-			return E('div', { id: 'rc-status-container' }, [
+			return E('div', { id: 'rc-status-container',style: 'margin-top: 6px;' }, [
 				E('span', {}, _('Enabled') + ': ' + (enabled ? _('Yes') : _('No'))),
 				E('span', { 'style': 'margin-left: 12px;' }, _('Running') + ': ' + (running ? _('Yes') : _('No')))
 			]);
@@ -575,6 +575,7 @@ return view.extend({
 				}, _('Hang')),
 				E('button', {
 					'class': 'cbi-button cbi-button-apply',
+					'style': 'margin-left: 6px;',
 					'click': ui.createHandlerFn(this, function(section_id) {
 						return qmodem.modemRedial(section_id).then(function(result) {
 							if (result && result.result && result.result.status === '1') {

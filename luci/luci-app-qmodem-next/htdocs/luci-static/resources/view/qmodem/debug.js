@@ -173,7 +173,7 @@ return view.extend({
 			
 			var responseDiv = E('textarea', {
 				'id': 'at_response_' + modem.id,
-				'style': 'padding: 10px; overflow-y: auto; font-family: monospace; white-space: pre-wrap; width: 80%;',
+				'style': 'padding: 10px; overflow-y: auto; font-family: monospace; white-space: pre-wrap; width: 80%;height: 200px;',
 				'rows': 20,
 				'readonly': 'readonly',
 			}, _('Click "Send AT Command" to execute'));
@@ -220,7 +220,7 @@ return view.extend({
 			if (cfg.at_cfg.cmds && cfg.at_cfg.cmds.length > 0) {
 				var quickSection = E('div', { 'class': 'cbi-value' });
 				quickSection.appendChild(E('label', { 'class': 'cbi-value-title' }, _('Quick Commands')));
-				var quickField = E('div', { 'class': 'cbi-value-field cbi-section-actions' });
+				var quickField = E('div', { 'class': 'cbi-value-field cbi-section-actions' , 'style': "display: flex;gap: 10px;flex-wrap: wrap;"});
 				
 				cfg.at_cfg.cmds.forEach(function(cmd) {
 					if (cmd.name && cmd.value) {

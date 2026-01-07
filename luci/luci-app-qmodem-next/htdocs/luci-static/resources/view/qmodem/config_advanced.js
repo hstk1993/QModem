@@ -141,6 +141,7 @@ return view.extend({
 			// Create tab button
 			var tabButton = E('li', {
 				'class': index === 0 ? 'cbi-tab' : 'cbi-tab-disabled',
+				'style': 'cursor: pointer;padding: 5px;',
 				'data-tab': key,
 				'click': function(ev) {
 					// Switch active tab
@@ -206,7 +207,7 @@ return view.extend({
 		container.appendChild(description);
 
 		// Current mode display
-		var currentModeSection = E('div', { 'class': 'cbi-value' });
+		var currentModeSection = E('div', { 'class': 'cbi-value','style': 'align-items:baseline' });
 		currentModeSection.appendChild(E('label', { 'class': 'cbi-value-title' }, _('Current Mode')));
 		var currentModeField = E('div', { 'class': 'cbi-value-field' });
 		var currentModeValue = E('strong', { 'id': 'current_mode_' + modem.id }, _('Loading...'));
@@ -348,7 +349,7 @@ return view.extend({
 		container.appendChild(description);
 
 		// Current network preference display
-		var currentPrefSection = E('div', { 'class': 'cbi-value' });
+		var currentPrefSection = E('div', { 'class': 'cbi-value','style': 'align-items:baseline'});
 		currentPrefSection.appendChild(E('label', { 'class': 'cbi-value-title' }, _('Current Preference')));
 		var currentPrefField = E('div', { 'class': 'cbi-value-field' });
 		var currentPrefValue = E('strong', { 'id': 'current_pref_' + modem.id }, _('Loading...'));
@@ -487,7 +488,7 @@ return view.extend({
 		container.appendChild(description);
 
 		// Current IMEI display
-		var currentImeiSection = E('div', { 'class': 'cbi-value' });
+		var currentImeiSection = E('div', { 'class': 'cbi-value' ,'style': 'align-items:baseline'});
 		currentImeiSection.appendChild(E('label', { 'class': 'cbi-value-title' }, _('Current IMEI')));
 		var currentImeiField = E('div', { 'class': 'cbi-value-field' });
 		var currentImeiValue = E('strong', { 
@@ -1195,7 +1196,7 @@ return view.extend({
 				// Current locked bands display
 				var currentSection = E('div', { 
 					'class': 'cbi-value',
-					'style': 'margin-bottom: 10px;'
+					'style': 'margin-bottom: 10px;align-items:baseline;'
 				});
 				currentSection.appendChild(E('label', { 'class': 'cbi-value-title' }, _('Locked Bands')));
 				var currentField = E('div', { 'class': 'cbi-value-field' });
