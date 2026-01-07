@@ -1,5 +1,5 @@
 config main 'main'
-	option enable_dial '1'
+	option enable_dial '0'
 	option try_preset_usb "1"
 	option try_preset_pcie "1"
 	option enable_pcie_scan '1'
